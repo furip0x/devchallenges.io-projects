@@ -1,2 +1,1 @@
-# devchallenges.io-projects
-Solutions for devchallanges.io challanges
+# My solutions for devchalenges.io projects
