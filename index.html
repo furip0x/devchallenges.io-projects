@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.png" sizes="any" />
+    <title>CSS Grid Layouts</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        line-height: 1;
+        background-color: #2f3237;
+        margin: 3rem 0 0 0;
+      }
+      section {
+        display: grid;
+        gap: 1rem;
+        max-width: 90rem;
+        padding: 0 1rem;
+        margin: 0 auto;
+      }
+      h1 {
+        color: #e5eaf0;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0 0 1rem;
+      }
+      h1 span {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 1.5rem 1rem;
+        margin: 0;
+        padding: 0;
+      }
+      ul li {
+        margin: 0;
+      }
+      ul li a {
+        display: grid;
+        gap: 1rem;
+        text-align: center;
+        text-decoration: none;
+        background-color: #2a2b2f;
+        border: 1px solid #454f59;
+        border-radius: 0.25rem;
+        padding: 1rem;
+        transition: 0.3s;
+      }
+      ul li a:hover {
+        border-color: #8d99a7;
+      }
+      ul li a h2 {
+        color: #e5eaf0;
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin: 0;
+      }
+      ul li a img {
+        width: 100%;
+        border-radius: 0.25rem;
+      }
+      .wip {
+        filter: grayscale(1) opacity(0.2) blur(1px);
+        cursor: not-allowed;
+      }
+      @media (min-width: 576px) {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1><span>devchallenges.io</span>Responsive Web Developer Challenges</h1>
+      <ul>
+        <li>
+          <a href="/responsive-web-developer/404-not-found/index.html">
+            <img
+              src="images/challengesDesigns_404PageThumbnail.png"
+              alt="404 Not Found"
+            />
+            <h2>404 Not Found</h2>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="wip">
+            <img
+              src="images/challengesDesigns_myTeamThumbnail.png"
+              alt="My Team Page"
+            />
+            <h2>My Team Page</h2>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="wip">
+            <img
+              src="images/challengesDesigns_interiorConsultantThumbnail.png"
+              alt="Interior Consultant"
+            />
+            <h2>Interior Consultant</h2>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="wip">
+            <img
+              src="images/challengesDesigns_recipeBlogThumbnail.png"
+              alt="Recipe Page"
+            />
+            <h2>Recipe Page</h2>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="wip">
+            <img
+              src="images/challengesDesigns_GalleryThumbnail.png"
+              alt="My Gallery"
+            />
+            <h2>My Gallery</h2>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="wip">
+            <img
+              src="images/challengesDesigns_CheckoutThumbnail.png"
+              alt="Checkout Page"
+            />
+            <h2>Checkout Page</h2>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="wip">
+            <img
+              src="images/challengesDesigns_EdieHomageThumbnail.png"
+              alt="Edie Homepage"
+            />
+            <h2>Edie Homepage</h2>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="wip">
+            <img
+              src="images/challengesDesigns_PortfolioThumbnail.png"
+              alt="Portfolio"
+            />
+            <h2>Portfolio</h2>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
