@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="/favicon.png" sizes="any" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Interior Consultant</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">This Interior</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Collection</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger-menu">
+        <span class="first-line"></span>
+        <span class="second-line"></span>
+        <span class="third-line"></span>
+      </div>
+    </header>
+    <main>
+      <div class="left">
+        <h1>Modern interior</h1>
+        <p>
+          A full-Service residential & commercial interior design and staging
+          company offering professional organizing & eco-services.
+        </p>
+        <a href="#">
+          Read more <img src="trending_flat_white_24dp.svg" alt="" />
+        </a>
+      </div>
+      <div class="right">
+        <img src="photo1.png" alt="" />
+        <div class="info">
+          <div class="person">
+            <img src="photo2.png" alt="" />
+            <div class="person-info">
+              <h2>Aliza Webber</h2>
+              <span>Interior designer</span>
+            </div>
+          </div>
+          <h3>Designed in 2020 by Aliza Webber</h3>
+        </div>
+      </div>
+    </main>
+    <footer>created by <a href="#">furip0x</a> - devChallenges.io</footer>
+    <script>
+      const nav = document.querySelector("nav")
+      const hamburgerMenu = document.querySelector(".hamburger-menu")
+      const handleMenuToggle = () => {
+        nav.classList.toggle("visible")
+        hamburgerMenu.classList.toggle("clicked")
+      }
+
+      hamburgerMenu.addEventListener("click", handleMenuToggle)
+    </script>
+  </body>
+</html>
