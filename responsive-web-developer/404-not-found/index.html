@@ -103,7 +103,6 @@
         }
         main {
           grid-template-columns: 1fr 1fr;
-          gap: 7.5rem;
           place-self: center;
           align-items: center;
           padding-left: 4.81rem;
@@ -114,6 +113,19 @@
         }
         .image {
           padding: 0;
+        }
+      }
+      @media (min-width: 768px) {
+        main {
+          gap: 3.5rem;
+        }
+        main h2 {
+          font-size: 3rem;
+        }
+      }
+      @media (min-width: 992px) {
+        main {
+          gap: 7.5rem;
         }
         main h2 {
           font-size: 4rem;
