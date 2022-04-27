@@ -226,31 +226,13 @@ footer a {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
   header {
     padding: 2.63rem 4.81rem;
   }
 
-  nav {
-    position: static;
-    display: block;
-    background-color: transparent;
-    text-align: center;
-    transform: none;
-    transition: none;
-  }
-  nav ul {
-    grid-auto-flow: column;
-    gap: 0 5.38rem;
-  }
-
-  .hamburger-menu {
-    display: none;
-  }
-
   main {
-    grid-template-columns: 1fr 1.9fr;
-    gap: 8.75rem;
+    gap: 3.75rem;
     align-items: center;
     padding: 1.31rem 4.81rem 2.5rem;
   }
@@ -260,7 +242,7 @@ footer a {
     margin-bottom: 2.5rem;
   }
   .left p {
-    max-width: 25.63rem;
+    max-width: none;
     font-size: 1.5rem;
     margin-bottom: 3rem;
   }
@@ -299,5 +281,37 @@ footer a {
   }
   .person-info span {
     font-size: 0.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .left p {
+    max-width: none;
+  }
+}
+@media (min-width: 992px) {
+  nav {
+    position: static;
+    display: block;
+    background-color: transparent;
+    text-align: center;
+    transform: none;
+    transition: none;
+  }
+  nav ul {
+    grid-auto-flow: column;
+    gap: 0 5.38rem;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  main {
+    grid-template-columns: 1fr 1.9fr;
+    gap: 8.75rem;
+  }
+
+  .left p {
+    max-width: 25.63rem;
   }
 }/*# sourceMappingURL=styles.css.map */
