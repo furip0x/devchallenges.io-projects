@@ -1,0 +1,379 @@
+// VARIABLES
+$fontMontserrat: "Montserrat", sans-serif;
+$fontPlayFair: "Playfair Display", serif;
+
+$black: #000;
+$white: #fff;
+$orange: #f2994a;
+$orange2: #dd7316;
+$gray1: #333;
+$gray2: #4f4f4f;
+$gray3: #828282;
+$gray4: #bdbdbd;
+
+$bp: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@mixin query($screen) {
+  @each $key, $value in $bp {
+    @if ($screen == $key) {
+      @media (min-width: $value) {
+        @content;
+      }
+    }
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+ul,
+ol,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: $fontMontserrat;
+  line-height: 1.3;
+  color: $black;
+  background-color: $white;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+//MAIN CONTENT
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 540px;
+  padding: 2rem 0.75rem;
+  margin: 0 auto;
+}
+
+.recipe-desc {
+  margin-bottom: 1.5rem;
+
+  h1 {
+    font-family: $fontPlayFair;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.25;
+    color: $gray2;
+    background: url(six-dots.svg) no-repeat left top 3px;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.recipe-img {
+  width: 100%;
+  min-height: 12.6rem;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  order: 1;
+}
+
+.info-box {
+  h2 {
+    font-family: $fontPlayFair;
+    font-size: 1.13rem;
+    font-weight: 700;
+    color: $gray1;
+    margin-bottom: 0.75rem;
+  }
+
+  &.instructions h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  & + & {
+    margin-top: 1.88rem;
+  }
+}
+
+.ingredient-group {
+  h3 {
+    font-family: $fontPlayFair;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: $gray1;
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+
+    li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: $gray1;
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+  input {
+    color: #fff;
+    accent-color: $orange2;
+    width: 1.31rem;
+    height: 1.31rem;
+    border: 1px solid $gray4;
+    border-radius: 0.25rem;
+    margin: 0;
+  }
+
+  label {
+    font-size: 0.88rem;
+  }
+
+  & + & {
+    margin-top: 2.63rem;
+  }
+}
+
+.instructions-group {
+  ul {
+    counter-reset: instructions;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    li {
+      position: relative;
+      font-size: 1rem;
+      line-height: 20px;
+      padding-left: 3.19rem;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: counter(instructions);
+        counter-increment: instructions;
+        width: 2.25rem;
+        height: 2.25rem;
+        display: grid;
+        align-items: flex-start;
+        justify-content: center;
+        font-family: $fontPlayFair;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.1;
+        color: $white;
+        background-color: $orange;
+        border-radius: 0.38rem;
+      }
+    }
+  }
+
+  & + & {
+    margin-top: 2.63rem;
+  }
+}
+
+.sidebar {
+  margin-bottom: 1.88rem;
+}
+
+.sidebar-list ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem 0.81rem;
+
+  li {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.31rem;
+
+    &:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .material-icons {
+      font-size: 1.06rem;
+    }
+  }
+}
+
+.sidebar-list-title {
+  font-weight: 700;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  color: $gray4;
+}
+
+.sidebar-list-desc {
+  font-weight: 500;
+  font-size: 0.63rem;
+  color: $gray1;
+}
+
+.sidebar-list ul li:first-child span,
+.sidebar-list ul li:first-child .sidebar-list-desc {
+  color: $orange;
+}
+
+//FOOTER
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  line-height: 1.2;
+  color: $gray4;
+  text-align: center;
+  padding: 1.5rem 0.75rem;
+}
+
+footer a {
+  color: $gray4;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+// MEDIA
+
+@include query(md) {
+  main {
+    max-width: 720px;
+  }
+}
+
+@include query(lg) {
+}
+
+@include query(xl) {
+  main {
+    max-width: 969px;
+    grid-template-columns: 1fr 216px;
+    column-gap: 10.55rem;
+  }
+
+  .content {
+    order: initial;
+  }
+
+  .recipe-desc {
+    grid-column: 1 / -1;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 0.88rem;
+      max-width: 37rem;
+      margin-bottom: 2.69rem;
+    }
+  }
+
+  .info-box {
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    & + & {
+      margin-top: 1.75rem;
+    }
+  }
+
+  .ingredient-group {
+    h3 {
+      font-size: 1.13rem;
+      margin-bottom: 1.88rem;
+    }
+
+    ul {
+      li {
+        font-size: 1rem;
+      }
+    }
+
+    & + & {
+      margin-top: 2.38rem;
+    }
+  }
+
+  .sidebar-list {
+    position: sticky;
+    top: 0.94rem;
+    background: $white;
+    box-shadow: 0px 0px 1.25rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    padding: 3.55rem 2.6rem;
+
+    ul {
+      grid-template-columns: 1fr;
+      gap: 2.63rem;
+
+      li {
+        gap: 0.75rem;
+
+        .material-icons {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+
+  .sidebar-list-title {
+    font-size: 0.63rem;
+  }
+  .sidebar-list-desc {
+    font-size: 0.88rem;
+  }
+}
+
+@include query(xxl) {
+}

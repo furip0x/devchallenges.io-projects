@@ -1,0 +1,303 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+ul,
+ol,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.3;
+  color: #000;
+  background-color: #fff;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 540px;
+  padding: 2rem 0.75rem;
+  margin: 0 auto;
+}
+
+.recipe-desc {
+  margin-bottom: 1.5rem;
+}
+.recipe-desc h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.recipe-desc p {
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.25;
+  color: #4f4f4f;
+  background: url(six-dots.svg) no-repeat left top 3px;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.recipe-img {
+  width: 100%;
+  min-height: 12.6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  order: 1;
+}
+
+.info-box h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+.info-box.instructions h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+.info-box + .info-box {
+  margin-top: 1.88rem;
+}
+
+.ingredient-group h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+.ingredient-group ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+.ingredient-group ul li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: #333;
+}
+.ingredient-group ul li span {
+  font-weight: 500;
+}
+.ingredient-group input {
+  color: #fff;
+  accent-color: #dd7316;
+  width: 1.31rem;
+  height: 1.31rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
+  margin: 0;
+}
+.ingredient-group label {
+  font-size: 0.88rem;
+}
+.ingredient-group + .ingredient-group {
+  margin-top: 2.63rem;
+}
+
+.instructions-group ul {
+  counter-reset: instructions;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.instructions-group ul li {
+  position: relative;
+  font-size: 1rem;
+  line-height: 20px;
+  padding-left: 3.19rem;
+}
+.instructions-group ul li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: counter(instructions);
+  counter-increment: instructions;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  background-color: #f2994a;
+  border-radius: 0.38rem;
+}
+.instructions-group + .instructions-group {
+  margin-top: 2.63rem;
+}
+
+.sidebar {
+  margin-bottom: 1.88rem;
+}
+
+.sidebar-list ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem 0.81rem;
+}
+.sidebar-list ul li {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.31rem;
+}
+.sidebar-list ul li:first-child {
+  grid-column: 1/-1;
+}
+.sidebar-list ul li .material-icons {
+  font-size: 1.06rem;
+}
+
+.sidebar-list-title {
+  font-weight: 700;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.sidebar-list-desc {
+  font-weight: 500;
+  font-size: 0.63rem;
+  color: #333;
+}
+
+.sidebar-list ul li:first-child span,
+.sidebar-list ul li:first-child .sidebar-list-desc {
+  color: #f2994a;
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  line-height: 1.2;
+  color: #bdbdbd;
+  text-align: center;
+  padding: 1.5rem 0.75rem;
+}
+
+footer a {
+  color: #bdbdbd;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  main {
+    max-width: 720px;
+  }
+}
+@media (min-width: 1200px) {
+  main {
+    max-width: 969px;
+    grid-template-columns: 1fr 216px;
+    -moz-column-gap: 10.55rem;
+         column-gap: 10.55rem;
+  }
+
+  .content {
+    order: initial;
+  }
+
+  .recipe-desc {
+    grid-column: 1/-1;
+    margin-bottom: 3rem;
+  }
+  .recipe-desc h1 {
+    font-size: 3rem;
+  }
+  .recipe-desc p {
+    font-size: 0.88rem;
+    max-width: 37rem;
+    margin-bottom: 2.69rem;
+  }
+
+  .info-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .info-box + .info-box {
+    margin-top: 1.75rem;
+  }
+
+  .ingredient-group h3 {
+    font-size: 1.13rem;
+    margin-bottom: 1.88rem;
+  }
+  .ingredient-group ul li {
+    font-size: 1rem;
+  }
+  .ingredient-group + .ingredient-group {
+    margin-top: 2.38rem;
+  }
+
+  .sidebar-list {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0.94rem;
+    background: #fff;
+    box-shadow: 0px 0px 1.25rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    padding: 3.55rem 2.6rem;
+  }
+  .sidebar-list ul {
+    grid-template-columns: 1fr;
+    gap: 2.63rem;
+  }
+  .sidebar-list ul li {
+    gap: 0.75rem;
+  }
+  .sidebar-list ul li .material-icons {
+    font-size: 1.75rem;
+  }
+
+  .sidebar-list-title {
+    font-size: 0.63rem;
+  }
+
+  .sidebar-list-desc {
+    font-size: 0.88rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
