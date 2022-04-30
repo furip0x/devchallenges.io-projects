@@ -72,42 +72,42 @@ main {
   grid-template-columns: 1fr 1fr;
   gap: 1rem 1.56rem;
   padding: 0 0.44rem;
-}
 
-.team li {
-  position: relative;
-  padding-right: 1.06rem;
-}
+  li {
+    position: relative;
+    padding-right: 1.06rem;
 
-.team li:nth-child(even) {
-  margin-top: 3rem;
-}
+    &:nth-child(even) {
+      margin-top: 3rem;
+    }
+  }
 
-.team img {
-  display: block;
-  width: 100%;
-}
+  img {
+    display: block;
+    width: 100%;
+  }
 
-.team h3 {
-  font-family: $fontPoppins;
-  font-weight: 600;
-  font-size: 0.88rem;
-  line-height: 1.5;
-  color: $black;
-  margin: 0.63rem 0 0;
-}
+  h3 {
+    font-family: $fontPoppins;
+    font-weight: 600;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: $black;
+    margin: 0.63rem 0 0;
+  }
 
-.team span {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-family: $fontPTSerif;
-  font-size: 0.63rem;
-  line-height: 1;
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
+  span {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: $fontPTSerif;
+    font-size: 0.63rem;
+    line-height: 1;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
 }
 
 //FOOTER
@@ -132,37 +132,41 @@ footer {
     max-width: 58.88rem;
     margin: 0 auto;
   }
+
   .info {
     display: grid;
     grid-template-columns: 1fr auto;
     margin-bottom: 6rem;
   }
+
   .info h1 {
     margin: 0;
   }
+
   .info p {
     max-width: 27.44rem;
     font-size: 1.13rem;
   }
+
   .team {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.69rem 4.19rem;
     padding: 0;
-  }
-  .team li {
-    padding-right: 1.44rem;
-  }
-  .team li:nth-child(even) {
-    margin-top: 0;
-  }
-  .team li:nth-child(2),
-  .team li:nth-child(5) {
-    margin-top: 6rem;
-  }
-  .team h3 {
-    font-size: 1.13rem;
-  }
-  .team span {
-    font-size: 0.75rem;
+
+    li {
+      padding-right: 1.44rem;
+
+      &:nth-child(3n + 2) {
+        margin-top: 6rem;
+      }
+    }
+
+    h3 {
+      font-size: 1.13rem;
+    }
+
+    span {
+      font-size: 0.81rem;
+    }
   }
 }

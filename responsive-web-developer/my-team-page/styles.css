@@ -62,21 +62,17 @@ main {
   gap: 1rem 1.56rem;
   padding: 0 0.44rem;
 }
-
 .team li {
   position: relative;
   padding-right: 1.06rem;
 }
-
 .team li:nth-child(even) {
   margin-top: 3rem;
 }
-
 .team img {
   display: block;
   width: 100%;
 }
-
 .team h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -85,7 +81,6 @@ main {
   color: #000;
   margin: 0.63rem 0 0;
 }
-
 .team span {
   display: block;
   position: absolute;
@@ -141,25 +136,16 @@ footer a {
     gap: 1.69rem 4.19rem;
     padding: 0;
   }
-
   .team li {
     padding-right: 1.44rem;
   }
-
-  .team li:nth-child(even) {
-    margin-top: 0;
-  }
-
-  .team li:nth-child(2),
-.team li:nth-child(5) {
+  .team li:nth-child(3n+2) {
     margin-top: 6rem;
   }
-
   .team h3 {
     font-size: 1.13rem;
   }
-
   .team span {
-    font-size: 0.75rem;
+    font-size: 0.81rem;
   }
 }/*# sourceMappingURL=styles.css.map */
