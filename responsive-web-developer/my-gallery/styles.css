@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+ul,
+ol,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.3;
+  color: #4e5150;
+  background-color: #fff;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 960px;
+  padding: 2rem 0.75rem;
+  margin: 0 auto;
+}
+
+.person {
+  display: grid;
+  place-items: center;
+  margin-bottom: 2.5rem;
+}
+.person h1 {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.person h2 {
+  font-size: 0.63rem;
+  font-weight: 600;
+  color: #a9a9a9;
+  margin-bottom: 0.75rem;
+}
+
+.person-img {
+  width: 6.31rem;
+  height: 6.31rem;
+  margin-bottom: 0.75rem;
+}
+.person-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+
+.box-group {
+  display: grid;
+  grid-template-columns: repeat(3, 4.88rem);
+  grid-auto-rows: 3.25rem;
+  gap: 0.94rem;
+}
+
+.box {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #e5e5e5;
+  border-radius: 0.75rem;
+}
+.box span {
+  color: #bdbdbd;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0px, 1fr));
+  grid-template-rows: repeat(3, minmax(0px, 1fr));
+  gap: 0.75rem;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50%;
+     object-position: 50%;
+  border-radius: 0.75rem;
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.15));
+}
+.gallery .w-2 {
+  grid-column: span 2;
+}
+.gallery .h-3 {
+  grid-row: span 3;
+}
+
+footer {
+  font-weight: 500;
+  font-size: 0.88rem;
+  line-height: 1.2;
+  color: #e5e5e5;
+  text-align: center;
+  padding: 1.5rem 0.75rem;
+}
+
+footer a {
+  color: #e5e5e5;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+  .person-img {
+    width: 9.75rem;
+    height: 9.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .person {
+    margin-bottom: 4rem;
+  }
+  .person h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .person h2 {
+    font-size: 0.88rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .box-group {
+    grid-template-columns: repeat(3, 6.25rem);
+    grid-auto-rows: 4.2rem;
+    gap: 1.5rem;
+  }
+
+  .box {
+    font-size: 1.13rem;
+  }
+  .box span {
+    font-size: 0.88rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
