@@ -94,8 +94,8 @@ main {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0px, 1fr));
-  grid-template-rows: repeat(3, minmax(0px, 1fr));
+  grid-template-columns: repeat(3, minmax(1px, 1fr));
+  grid-template-rows: repeat(3, minmax(1px, 1fr));
   gap: 0.75rem;
 }
 .gallery img {
@@ -103,8 +103,6 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50%;
-     object-position: 50%;
   border-radius: 0.75rem;
   filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.15));
 }
