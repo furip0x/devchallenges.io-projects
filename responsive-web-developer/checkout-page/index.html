@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.png" sizes="any" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <title>Checkout Page</title>
+</head>
+
+<body>
+  <main>
+    <div class="main-wrapper">
+      <h1>Checkout</h1>
+      <div class="sidebar">
+        <div class="cart">
+          <div class="cart-item">
+            <div class="cart-img">
+              <img src="photo1.png" alt="Vintage backbag">
+            </div>
+            <div class="cart-info">
+              <div class="cart-title">Vintage Backbag</div>
+              <div class="cart-price">
+                $54.99 <span>$94.99</span>
+              </div>
+              <div class="cart-quantity">
+                <button class="decrement-btn">
+                  <span class="material-icons-round decrement">
+                    remove
+                  </span>
+                </button>
+                <div class="count">1</div>
+                <button class="increment-btn">
+                  <span class="material-icons-round increment">
+                    add
+                  </span></button>
+              </div>
+            </div>
+          </div>
+          <div class="cart-item">
+            <div class="cart-img">
+              <img src="photo2.png" alt="Levi shoes">
+            </div>
+            <div class="cart-info">
+              <div class="cart-title">Levi Shoes</div>
+              <div class="cart-price">
+                $74.99 <span>$124.99</span>
+              </div>
+              <div class="cart-quantity">
+                <button class="decrement-btn">
+                  <span class="material-icons-round decrement">
+                    remove
+                  </span>
+                </button>
+                <div class="count">1</div>
+                <button class="increment-btn">
+                  <span class="material-icons-round increment">
+                    add
+                  </span></button>
+              </div>
+            </div>
+          </div>
+          <div class="cart-total">
+            <ul>
+              <li>
+                <span>Shipping</span>
+                <span>$19</span>
+              </li>
+              <li>
+                <span>Total</span>
+                <span>$148.98</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class="content">
+        <form class="form">
+          <div class="form-section">
+            <h2>Contact infomation</h2>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <div class="input-group">
+                    <span class="material-icons-round">
+                      email
+                    </span>
+                    <input type="email" id="email" placeholder="Enter your email..." required>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <div class="input-group">
+                    <span class="material-icons-round">
+                      call
+                    </span>
+                    <input type="tel" id="phone" placeholder="Enter your phone..." required>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <h2>Shipping address</h2>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="name">Full name</label>
+                  <div class="input-group">
+                    <span class="material-icons-round">
+                      account_circle
+                    </span>
+                    <input type="text" id="name" placeholder="Enter your name" value="Rodney Cotton" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="address">Address</label>
+                  <div class="input-group">
+                    <span class="material-icons-round">
+                      home
+                    </span>
+                    <input type="text" id="address" placeholder="Your address.." required>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="city">City</label>
+                  <div class="input-group">
+                    <span class="material-icons-round">
+                      location_city
+                    </span>
+                    <input type="text" id="city" placeholder="Your city.." required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row cols-2">
+              <div class="col">
+                <div class="form-group select">
+                  <label for="country">Country</label>
+                  <div class="input-group">
+                    <span class="material-icons-round">
+                      location_city
+                    </span>
+                    <select id="country" required>
+                      <option value="">Your country..</option>
+                      <option value="usa">U.S.A</option>
+                      <option value="canada">Canada</option>
+                      <option value="germany">Germany</option>
+                      <option value="france">France</option>
+                      <option value="italy">Italy</option>
+                      <option value="sweden">Sweden</option>
+                    </select>
+                    <span class="material-icons-round">
+                      keyboard_arrow_down
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="postalCode">Postal Code</label>
+                  <div class="input-group">
+                    <span class="material-icons-round">
+                      markunread_mailbox
+                    </span>
+                    <input type="number" id="postalCode" placeholder="Your postal code.." required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group checkbox">
+                  <input id="saveInfo" type="checkbox">
+                  <label for="saveInfo">Save this information for next time</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <input id="submitBtn" type="submit" value="Continue">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer>
+    created by
+    <a href="https://github.com/furip0x" target="_blank" rel="noreferrer noopener">furip0x</a>
+    - devChallenges.io
+  </footer>
+  <script>
+    const cartQuantities = document.querySelectorAll(".cart-quantity")
+
+    cartQuantities.forEach(element => {
+      element.addEventListener("click", (elem) => {
+        const { target } = elem;
+        const quantityInt = parseInt(target.closest(".cart-info").querySelector(".count").textContent)
+
+        if (target.closest("button")) {
+          if (target.classList.contains("increment")) {
+            target.closest(".cart-info").querySelector(".count").textContent = quantityInt + 1
+          }
+          if (target.classList.contains("decrement") && quantityInt > 1) {
+            target.closest(".cart-info").querySelector(".count").textContent = quantityInt - 1
+          }
+        }
+      })
+    });
+
+    const form = document.querySelector(".form")
+    const email = document.querySelector("#email")
+    const phone = document.querySelector("#phone")
+    const name = document.querySelector("#name")
+    const address = document.querySelector("#address")
+    const city = document.querySelector("#city")
+    const country = document.querySelector("#country")
+    const postalCode = document.querySelector("#postalCode")
+    const submitBtn = document.querySelector("#submitBtn")
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      submitBtn.setAttribute("value", "Success!")
+      submitBtn.style.background = "#7CFC00"
+    })
+  </script>
+</body>
+
+</html>
